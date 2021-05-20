@@ -1,0 +1,10 @@
+transferencias:
+    type: rest
+    resource: "AppBundle\\Controller\\TransferenciasController"
+    name_prefix: "transferencias_"
+
+
+carteiras:
+    type: rest
+    resource: "AppBundle\\Controller\\CarteirasController"
+    name_prefix: "carteiras_"

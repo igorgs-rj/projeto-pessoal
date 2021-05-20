@@ -1,0 +1,10 @@
+api:
+    resource: "routing/api.yml"
+    type:     rest
+    prefix:   /
+    options:
+        expose: true
+
+
+
+       

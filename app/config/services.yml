@@ -1,0 +1,44 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
+        
+    Desafio\:
+        resource: '../../src/Desafio/*'
+        exclude: '../../src/Desafio/{Entity}'
+
+    Desafio\Controller\:
+        resource: '../../src/Desafio/Controller'
+        public: true
+        tags: ['controller.service_arguments']
+
+    Desafio\Service\CarteirasService:
+      class: Desafio\Service\CarteirasService
+      public: true
+      arguments: 
+          $repository: "@nasajon_mda._estabelecimentos_repository"
+
+    Desafio\Service\CarteirasService:
+      class: Desafio\Service\CarteirasService
+      public: true
+      arguments: 
+            - "@Desafio\\Repository\\CarteirasRepository"
+
+    Desafio\Repository\CarteirasRepository:
+        class: Desafio\Repository\CarteirasRepository
+        public: true
+        arguments:
+            - "@database_connection"
+
+    Desafio\Service\TransferenciasService:
+      class: Desafio\Service\TransferenciasService
+      public: true
+      arguments: 
+            - "@Desafio\\Repository\\TransferenciasRepository"
+
+    Desafio\Repository\TransferenciasRepository:
+        class: Desafio\Repository\TransferenciasRepository
+        public: true
+        arguments:
+            - "@database_connection"

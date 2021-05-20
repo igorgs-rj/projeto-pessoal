@@ -1,0 +1,31 @@
+{
+    "name": "teste/igor",
+    "description": "Teste",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Igor Silva",
+            "email": "igor-gsilva@hotmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "AppBundle\\": "src/Teste"
+        },
+        "classmap": ["app/AppKernel.php", "app/AppCache.php"]
+    },
+    "require": {
+        "php": "7.4.9",
+        "doctrine/doctrine-bundle": "^1.6",
+        "doctrine/orm": "^2.5",
+        "guzzlehttp/guzzle": "~6.0",
+        "symfony/symfony": "^3.4.43",
+        "symfony/phpunit-bridge": "^3.0",
+        "phpunit/phpunit": "6.*",
+        "doctrine/doctrine-migrations-bundle": "^1.3",
+        "codeception/codeception" : "^2.3",
+        "indigophp/doctrine-annotation-autoload":"^0.1.0",
+        "friendsofsymfony/jsrouting-bundle": "^1.6",
+        "friendsofsymfony/rest-bundle": "^1.7"
+    }
+}
